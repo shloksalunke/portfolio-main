@@ -1,0 +1,6 @@
+/* Add responsive styles for background animation */
+@media screen and (max-width: 768px) {
+  canvas {
+    opacity: 0.5; /* Reduce opacity on mobile for better readability */
+  }
+} 

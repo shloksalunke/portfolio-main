@@ -1,0 +1,48 @@
+@media screen and (max-width: 768px) {
+  .experience-card {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  .experience-content {
+    padding: 1rem;
+  }
+
+  .experience-title {
+    font-size: 1.25rem;
+  }
+
+  .experience-period {
+    font-size: 0.875rem;
+  }
+
+  .experience-description {
+    font-size: 0.875rem;
+  }
+
+  /* Adjust card height for mobile */
+  .perspective-1000 {
+    height: 450px !important;
+  }
+
+  /* Navigation styles */
+  .navigation-dots {
+    flex-direction: row !important;
+    justify-content: center;
+    flex: 1;
+  }
+
+  .navigation-container.mobile {
+    position: static;
+    transform: none;
+    margin-top: 1rem;
+  }
+
+  /* Adjust spacing for mobile navigation */
+  .mobile-nav-container {
+    padding: 0 1rem;
+    width: 100%;
+  }
+} 

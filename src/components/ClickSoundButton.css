@@ -1,0 +1,17 @@
+.futuristic-button {
+  background-color: #0f0f0f;
+  color: #00ffee;
+  border: 2px solid #00ffee;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.futuristic-button:hover {
+  background-color: #00ffee;
+  color: #0f0f0f;
+  box-shadow: 0 0 12px #00ffee;
+}

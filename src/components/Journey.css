@@ -1,0 +1,156 @@
+.journey-section {
+  min-height: 100vh;
+  padding: 4rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.heading-container {
+  position: relative;
+  width: 100%;
+  z-index: 20;
+  padding-top: 4rem;
+}
+
+.journey-heading {
+  position: relative;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  z-index: 10;
+  padding-top: 2rem;
+}
+
+.journey-frame {
+  position: relative;
+  width: 600px;
+  height: 500px;
+  margin: 0 auto;
+  background: rgba(17, 17, 17, 0.8);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.journey-object {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  perspective: 1000px;
+  z-index: 1;
+}
+
+.journey-carousel {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.journey-cell {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  top: 10px;
+  left: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  background: rgba(17, 17, 17, 0.9);
+  overflow: hidden;
+  border-radius: 16px;
+  backface-visibility: hidden;
+}
+
+/* Position cells in a heptagon (7-sided polygon) */
+.journey-cell:nth-child(1) { transform: rotateY(0deg) translateZ(300px); }
+.journey-cell:nth-child(2) { transform: rotateY(51.43deg) translateZ(300px); }
+.journey-cell:nth-child(3) { transform: rotateY(102.86deg) translateZ(300px); }
+.journey-cell:nth-child(4) { transform: rotateY(154.29deg) translateZ(300px); }
+.journey-cell:nth-child(5) { transform: rotateY(205.71deg) translateZ(300px); }
+.journey-cell:nth-child(6) { transform: rotateY(257.14deg) translateZ(300px); }
+.journey-cell:nth-child(7) { transform: rotateY(308.57deg) translateZ(300px); }
+
+.journey-cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.journey-controls {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  z-index: 10;
+}
+
+.control-button {
+  padding: 12px;
+  border-radius: 50%;
+  background: rgba(6, 182, 212, 0.9);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.control-button:hover {
+  background: rgba(8, 145, 178, 0.9);
+  transform: translateY(-2px);
+}
+
+.journey-cell.active {
+  transform: rotateY(0deg) translateZ(275px) scale(1.05);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  .journey-frame {
+    width: 100%;
+    max-width: 350px;
+    height: 400px;
+    padding: 10px;
+  }
+
+  .journey-carousel {
+    width: 200px;
+    height: 200px;
+  }
+
+  .journey-cell {
+    width: 180px;
+    height: 180px;
+    top: 10px;
+    left: 10px;
+  }
+
+  .journey-cell:nth-child(1) { transform: rotateY(0deg) translateZ(200px); }
+  .journey-cell:nth-child(2) { transform: rotateY(51.43deg) translateZ(200px); }
+  .journey-cell:nth-child(3) { transform: rotateY(102.86deg) translateZ(200px); }
+  .journey-cell:nth-child(4) { transform: rotateY(154.29deg) translateZ(200px); }
+  .journey-cell:nth-child(5) { transform: rotateY(205.71deg) translateZ(200px); }
+  .journey-cell:nth-child(6) { transform: rotateY(257.14deg) translateZ(200px); }
+  .journey-cell:nth-child(7) { transform: rotateY(308.57deg) translateZ(200px); }
+
+  .heading-container {
+    padding-top: 2rem;
+  }
+
+  .journey-heading {
+    font-size: 1.875rem; /* text-3xl */
+  }
+
+  .mb-48 {
+    margin-bottom: 6rem;
+  }
+} 
