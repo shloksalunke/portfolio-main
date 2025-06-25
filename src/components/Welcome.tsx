@@ -11,7 +11,7 @@ const Welcome = ({ onComplete }: { onComplete: () => void }) => {
       videoRef.current.play();
       const timer = setTimeout(() => {
         onComplete();
-      }, 2000);
+      }, 2200);
       return () => clearTimeout(timer);
     }
   }, [onComplete, isMobile]);
