@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
@@ -19,6 +19,26 @@ import Journey from './components/Journey';
 function App() {
   const [currentState, setCurrentState] = useState<'loading' | 'welcome' | 'main'>('loading');
 
+  // 🔊 Add Click Sound Effect
+  useEffect(() => {
+    const clickSound = new Audio('/click.mp3');
+    clickSound.volume = 0.4;
+
+    const handleClick = () => {
+      const soundClone = clickSound.cloneNode() as HTMLAudioElement;
+      soundClone.play().catch(() => {
+        // Browser blocked it or already playing
+      });
+    };
+
+    document.addEventListener('click', handleClick);
+
+    return () => {
+      document.removeEventListener('click', handleClick);
+    };
+  }, []);
+
+  // ✨ Blinking cursor animation (already present)
   useGSAP(() => {
     gsap.to('.cursor', {
       opacity: 0,
