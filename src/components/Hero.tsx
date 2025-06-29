@@ -137,7 +137,7 @@ const Hero = () => {
             <i className="fab fa-linkedin text-2xl" />
           </motion.a>
           <motion.a
-            href="mailto:sreeharshaalapati@gmail.com"
+            href="mailto:shloksalunke56@"
             className="text-cyan-400 hover:text-cyan-300 transform hover:scale-110 transition-all"
             whileHover={{ scale: 1.2 }}
           >
